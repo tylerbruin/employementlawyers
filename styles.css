@@ -22,6 +22,7 @@ p {
     --magic-numberS: 0.04374;
     --content-width: 100vw;
     --skew-paddingS: calc(var(--content-width) * var(--magic-numberS));
+    scroll-behavior: smooth;
 }
 
 body h2 {
@@ -222,7 +223,7 @@ section, footer {
     justify-content: space-between;
     max-height: 500px;
     margin-bottom: 2rem;
-    transition: 0.5s all;
+    transition: 0.25s all;
 
 }
 
