@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", function(){
     var helpItems = document.querySelectorAll(".what-section__item");
 
     for(var i=0;i<helpItems.length;i++){
-        helpItems[i].addEventListener("click", function(){
-            contactPopup();
+        helpItems[i].addEventListener("click", function(e){
+            console.log("e = ", e);
         });
     }
 
