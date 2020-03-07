@@ -135,8 +135,9 @@
             </div>
         </div>
     </section>
-    <section id="form">
-        <form name="contact" method="POST" data-netlify="true">
+    <section id="form-section">
+        <form name="contact" action="/#contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <h2 id="contact-form" class="footer-heading">Contact us</h2>
             <p>
               <label>Your Name: <input type="text" name="name" /></label>   
             </p>
@@ -144,10 +145,7 @@
               <label>Your Email: <input type="email" name="email" /></label>
             </p>
             <p>
-              <label>Your Role: <select name="role[]" multiple>
-                <option value="leader">Leader</option>
-                <option value="follower">Follower</option>
-              </select></label>
+                <label>Attach Files: <input type="file" name="file" /></label>
             </p>
             <p>
               <label>Message: <textarea name="message"></textarea></label>
@@ -202,7 +200,7 @@
             </div>
         </div>
     </footer>
-    <!-- <div class="contact-btn"><a href="#contact">Contact us</a></div> -->
+    <div class="contact-btn"><a href="#contact">Contact us</a></div>
     <script src="main.js"></script>
 </body>
 </html>
