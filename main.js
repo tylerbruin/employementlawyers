@@ -39,9 +39,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(e){
-    e.preventDefault();
+    
     var fileUploadInput = document.querySelector("#fileupload");
+    
     if(fileUploadInput.value == ""){
+        e.preventDefault();
         const formData = new FormData(form);
         var stringData = new URLSearchParams(formData).toString();
         console.log("stringdata = ", stringData);
