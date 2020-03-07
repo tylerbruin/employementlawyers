@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 
-let form = document.querySelector("#contact form");
+let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(){
     const formData = new FormData(FormData);
     stringData = new URLSearchParams(formData).toString();
