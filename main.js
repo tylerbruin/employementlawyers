@@ -40,14 +40,21 @@ document.addEventListener("DOMContentLoaded", function(){
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    const formData = new FormData(form);
-    var stringData = new URLSearchParams(formData).toString();
-    console.log("stringdata = ", stringData);
-    var action = form.getAttribute('action');
-    ajaxRequest("POST", action, stringData, function(){
-        formSuccess();
-        toaster("Thanks, we've recieved your message and will be in touch!", 4500)
-    });
+    var fileUploadInput = document.querySelector("#fileupload");
+    if(fileUploadInput.value == ""){
+        const formData = new FormData(form);
+        var stringData = new URLSearchParams(formData).toString();
+        console.log("stringdata = ", stringData);
+        var action = form.getAttribute('action');
+        ajaxRequest("POST", action, stringData, function(){
+            formSuccess();
+            toaster("Thanks, we've recieved your message and will be in touch!", 4500)
+        });
+    }
+    else {
+        return true;
+    }
+
 });
 
 function formSuccess(){
