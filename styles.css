@@ -459,7 +459,7 @@ footer p {
     justify-content: center;
     width: 100%;
 }
-#toast {
+#bread {
     visibility: hidden;
     min-width: 250px;
     background-color: #333;
@@ -473,7 +473,7 @@ footer p {
     font-size: 18px;
 }
   
-#toast.show {
+#bread.show {
     visibility: visible;
     -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
