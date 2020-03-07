@@ -45,7 +45,7 @@ form.addEventListener('submit', function(){
     const formData = new FormData(FormData);
     var stringData = new URLSearchParams(formData).toString();
     var action = form.getAttribute('action');
-    ajaxRequest("POST", , stringData, function(){
+    ajaxRequest("POST", action, stringData, function(){
         alert("hullo! ");
     });
 });
