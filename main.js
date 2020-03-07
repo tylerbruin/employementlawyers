@@ -41,7 +41,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 let form = document.querySelector("#form-section form");
-form.addEventListener('submit', function(){
+form.addEventListener('submit', function(e){
+    e.preventDefault();
     const formData = new FormData(FormData);
     var stringData = new URLSearchParams(formData).toString();
     var action = form.getAttribute('action');
