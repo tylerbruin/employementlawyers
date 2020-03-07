@@ -52,6 +52,7 @@ form.addEventListener('submit', function(e){
         });
     }
     else {
+        console.log("yeet");
         return true;
     }
 
