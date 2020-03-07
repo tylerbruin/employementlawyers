@@ -38,16 +38,17 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-
+// .erLLhsnyT6p4vQh1
 
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(e){
     e.preventDefault();
-    const formData = new FormData(FormData);
+    const formData = new FormData(form);
     var stringData = new URLSearchParams(formData).toString();
     var action = form.getAttribute('action');
-    ajaxRequest("POST", action, stringData, function(){
-        alert("hullo! ");
+    ajaxRequest("POST", action, stringData, function(response){
+        alert("hullo!");
+        console.log("res = ", response);
     });
 });
 
