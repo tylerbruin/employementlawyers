@@ -138,22 +138,12 @@
     <section id="form-section">
         <form name="contact" action="/#contact-form" method="POST" data-netlify-recaptcha="true" data-netlify="true">
             <h2 id="contact-form" class="footer-heading">Contact us</h2>
-            <p>
-              <label>Your Name: <input type="text" name="name" /></label>   
-            </p>
-            <p>
-              <label>Your Email: <input type="email" name="email" /></label>
-            </p>
-            <p>
+                <label>Your Name: <input type="text" name="name" /></label>   
+                <label>Your Email: <input type="email" name="email" /></label>
                 <label>Attach Files: <input type="file" name="file" /></label>
-            </p>
-            <p>
-              <label>Message: <textarea name="message"></textarea></label>
-            </p>
-            <div data-netlify-recaptcha="true" ></div>
-            <p>
-              <button type="submit">Send</button>
-            </p>
+                <label>Message: <textarea name="message"></textarea></label>
+                <div data-netlify-recaptcha="true" ></div>
+              <button class="btn" type="submit">Send</button>
           </form>
 
     </section>
@@ -202,9 +192,7 @@
         </div>
     </footer>
     <div class="contact-btn"><a href="#contact">Contact us</a></div>
-    <div class="toaster">
-        <div id="toast"></div>
-    </div>
+    <div class="toaster"><div id="bread"></div></div>
     <script src="main.js"></script>
 </body>
 </html>

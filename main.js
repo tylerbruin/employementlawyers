@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function(){
 
             var contactBtn = document.querySelector(".contact-btn");
             contactBtn.style.opacity = "1";
-            contactBtn.style.top = e.pageY+"px";
-            contactBtn.style.left =  e.pageX+"px";
+            contactBtn.style.top = e.pageY + 10 +"px";
+            contactBtn.style.left =  e.pageX + 10 +"px";
 
             hideBtn = setTimeout(function(){
                 contactBtn.style.opacity = "0";
@@ -42,6 +42,7 @@ form.addEventListener('submit', function(e){
     e.preventDefault();
     const formData = new FormData(form);
     var stringData = new URLSearchParams(formData).toString();
+    console.log("stringdata = ", stringData);
     var action = form.getAttribute('action');
     ajaxRequest("POST", action, stringData, function(){
         toaster("Thanks, we've recieved your message and will be in touch!")
@@ -50,7 +51,7 @@ form.addEventListener('submit', function(e){
 
 
 function toaster(message) {
-    var x = document.getElementById("toast");
+    var x = document.getElementById("bread");
     x.innerText = message;
     x.className = "show";
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4500);
