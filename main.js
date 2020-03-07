@@ -43,8 +43,9 @@ document.addEventListener("DOMContentLoaded", function(){
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(){
     const formData = new FormData(FormData);
-    stringData = new URLSearchParams(formData).toString();
-    ajaxRequest("POST", form.getAttribute('action'), stringData, function(){
+    var stringData = new URLSearchParams(formData).toString();
+    var action = form.getAttribute('action');
+    ajaxRequest("POST", , stringData, function(){
         alert("hullo! ");
     });
 });
