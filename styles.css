@@ -375,3 +375,8 @@ footer p {
 .contact-btn:hover a {
     background-color: var(--light);
 } */
+
+
+form {
+    float: right;
+}
