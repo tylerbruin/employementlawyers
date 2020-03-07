@@ -23,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function(){
                     contactBtn.style.top = "-100px";
                     contactBtn.style.left =  "-100px";
                 }, 0250);
- 
             }, 4000)
         });
     }
@@ -38,17 +37,21 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 });
 
-// .erLLhsnyT6p4vQh1
-
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(e){
     e.preventDefault();
     const formData = new FormData(form);
     var stringData = new URLSearchParams(formData).toString();
     var action = form.getAttribute('action');
-    ajaxRequest("POST", action, stringData, function(response){
-        alert("hullo!");
-        console.log("res = ", response);
+    ajaxRequest("POST", action, stringData, function(){
+        toaster("Thanks, we've recieved your message and will be in touch!")
     });
 });
 
+
+function toaster(message) {
+    var x = document.getElementById("toast");
+    x.innerText = message;
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4500);
+  }
