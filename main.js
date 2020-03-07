@@ -45,10 +45,16 @@ form.addEventListener('submit', function(e){
     console.log("stringdata = ", stringData);
     var action = form.getAttribute('action');
     ajaxRequest("POST", action, stringData, function(){
+        formSuccess();
         toaster("Thanks, we've recieved your message and will be in touch!", 4500)
     });
 });
 
+function formSuccess(){
+    form.classList.add("hide");
+    var formSuccessMsg = document.querySelector(".form-success");
+    formSuccessMsg.classList.add("true");
+};
 
 function toaster(message, timer) {
     var x = document.getElementById("bread");

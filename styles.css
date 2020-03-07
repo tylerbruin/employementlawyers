@@ -426,6 +426,9 @@ footer p {
     border-radius: 10px;
     max-width: 500px;
     padding: 2rem;
+    opacity: 1;
+    visibility: visible;
+    transform: all .75s;
 }
 #form-section form h2 {
     padding: 0 0 2rem 0;
@@ -449,6 +452,11 @@ footer p {
     font-size: 18px;
     padding: 5px;
     line-height: 1.5;
+}
+
+#form-section form.hide * {
+    opacity: 0;
+    visibility: hidden;
 }
 
 
@@ -480,10 +488,39 @@ footer p {
   
 #bread.show {
     visibility: visible;
-    bottom: 30px;
+    bottom: 45px;
     opacity: 1;
 }
 #bread i:first-child {
     margin-right: 1rem;
     
+}
+
+
+.form-success {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    align-self: center;
+    height: 200px;
+    max-width: 500px;
+    color: var(--lightest);
+    opacity: 0;
+    visibility: hidden;
+    transition: .75s;
+}
+.form-success.true {
+    opacity: 1;
+    visibility: visible;
+}
+.form-success p {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.form-success i {
+    transform: scale(3);
 }
