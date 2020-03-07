@@ -460,6 +460,8 @@ footer p {
     width: 100%;
 }
 #bread {
+    display: flex;
+    align-items: baseline;
     visibility: hidden;
     min-width: 250px;
     background-color: #333;
@@ -469,32 +471,19 @@ footer p {
     padding: 1rem;
     position: fixed;
     z-index: 1;
-    bottom: 45px;
+    bottom: -30px;
+    opacity: 0;
     font-size: 18px;
+    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.3);
+    transition: 0.5s;
 }
   
 #bread.show {
     visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    bottom: 30px;
+    opacity: 1;
 }
-  
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+#bread i:first-child {
+    margin-right: 1rem;
+    
 }

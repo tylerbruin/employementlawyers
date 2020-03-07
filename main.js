@@ -45,14 +45,17 @@ form.addEventListener('submit', function(e){
     console.log("stringdata = ", stringData);
     var action = form.getAttribute('action');
     ajaxRequest("POST", action, stringData, function(){
-        toaster("Thanks, we've recieved your message and will be in touch!")
+        toaster("Thanks, we've recieved your message and will be in touch!", 4500)
     });
 });
 
 
-function toaster(message) {
+function toaster(message, timer) {
     var x = document.getElementById("bread");
-    x.innerText = message;
+    x.innerHTML = '<i class="gg-comment"></i>' + message;
     x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 4500);
-  }
+    setTimeout(function(){ 
+        x.className = x.className.replace("show", ""); 
+    }, timer);
+}
+
