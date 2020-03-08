@@ -1,6 +1,15 @@
 function ajaxRequest(e,t,n,a){let s=new XMLHttpRequest;s.open(e,t,!0),"POST"==e&&s.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),s.onreadystatechange=function(){if(4==s.readyState&&200==s.status){let e=s.responseText;a(e)}},s.send(n)}
 document.addEventListener("DOMContentLoaded", function(){
 
+
+    // Check for submission
+    const urlParams = new URLSearchParams(window.location.search);
+    const submissionParam = urlParams.get('submission');
+    if(submissionParam){
+        window.location.href = '#contact-form';
+        formSuccess();
+        toaster("Thanks, we've recieved your message and will be in touch!", 4500)
+    }
     // How can we help section
     var helpItems = document.querySelectorAll(".what-section__item");
     var hideBtn = 0;
@@ -28,20 +37,23 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     // Who are we section
-    var readmore = document.querySelector(".more-button");
-    var profilesEl = document.querySelector(".who-profiles");
-    
-    readmore.addEventListener("click", function(){
-       profilesEl.classList.contains("open") ?  profilesEl.classList.remove("open") : profilesEl.classList.add("open");
-       profilesEl.classList.contains("open") ?  readmore.innerHTML = 'Read less <i class="gg-arrow-up-r"></i>' : readmore.innerHTML = 'Read more<i class="gg-arrow-down-r"></i>';
-    });
+    const readmore = document.querySelectorAll(".more-button");
+    for(var x=0;x<readmore.length;x++){
+        readmore[x].addEventListener("click", function(e){
+           var btn = e.target;
+           var el = e.target.previousElementSibling;
+           el.classList.contains("open") ?  el.classList.remove("open") : el.classList.add("open");
+           el.classList.contains("open") ?  btn.innerHTML = 'Read less <i class="gg-arrow-up-r"></i>' : btn.innerHTML = 'Read more<i class="gg-arrow-down-r"></i>';
+         });
+    }
+
 });
 
 let form = document.querySelector("#form-section form");
 form.addEventListener('submit', function(e){
     
     var fileUploadInput = document.querySelector("#fileupload");
-    
+
     if(fileUploadInput.value == ""){
         e.preventDefault();
         const formData = new FormData(form);
