@@ -27,7 +27,12 @@ p {
 /* body {
     overflow-x:hidden 
 } */
-
+.text-white {
+    color: #fff;
+}
+.text-black {
+    color: #000
+}
 body h2 {
     font-size: 1.8em;
     padding: 3rem 0;
@@ -58,6 +63,8 @@ body h2 {
 
 .open { 
     max-height: 9999px !important;
+    transition: all 0.5s;
+    transition-delay: 0;
 } 
 
 #header-container {
@@ -274,6 +281,9 @@ section, footer {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -297,8 +307,14 @@ section, footer {
     padding: 0 1rem;
     max-height: 150px;
     overflow: hidden;
-    transition: all 1s;
+    transition-delay: 0s;
+    transition: all 0.25s;
+}
 
+#why-section .more-button {
+    color: #000;
+    align-self: center;
+    margin-bottom: 2rem;
 }
 
 /* Desktop */
@@ -320,7 +336,7 @@ section, footer {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 2rem;  
-    transition: 0.25s all;
+    transition: 0.5s all;
 
 }
 
@@ -334,10 +350,9 @@ section, footer {
 #who-section .who-profiles .profile-text {
     max-height: 0px;
     overflow: hidden;
-    transition: all 1s;
+    transition: all 0.25s;
 }
-
-#who-section a.more-button {
+a.more-button {
     display: flex;
     align-items: center;
     margin-top: 1.5rem;
@@ -348,7 +363,7 @@ section, footer {
     font-weight: 600;
 }
 
-#who-section a.more-button i {
+a.more-button i {
     margin-left: 1rem;
 }
 
