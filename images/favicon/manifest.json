@@ -1,7 +1,7 @@
 {
  "name": "Employment Lawyers",
  "short_name": "e2law",
- "start_url": ".",
+ "start_url": "https://employmentlawyers.netlify.com/",
  "display": "standalone",
  "background_color": "#fff",
  "description": "Employment Lawyers Tauranga",
