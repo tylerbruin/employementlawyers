@@ -437,10 +437,10 @@ a.more-button i {
 footer {
     background-color: #3f3d55;
     display: flex;
-    flex-direction: column;
-    padding: 1.5rem 0 3rem 0;
+    flex-direction: row;
+    padding: 1.5rem 1rem 3rem 1rem;
     margin: 0 auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -453,10 +453,12 @@ footer .footer-heading {
 }
 
 footer .contact-block {
-    width: 15%;
+    width: 45%;
 }
 footer .contact-block:nth-child(4) {
-    width: 23%
+    width: 95%;
+    flex-direction: row;
+    order: 5;
 }
 
 footer .contact-heading {
@@ -486,9 +488,16 @@ footer p {
     margin-bottom: 0rem;
 }
 
+
 @media (min-width:1025px) { 
     footer {
-        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    footer .contact-block {
+        width: 15%;
+    }
+    footer .contact-block:nth-child(4) {
+        width: 23%
     }
 }
 
@@ -594,7 +603,6 @@ footer p {
     min-width: 250px;
     background-color: #333;
     color: #fff;
-    text-align: center;
     border-radius: 2px;
     padding: 1rem;
     position: fixed;
@@ -613,7 +621,10 @@ footer p {
 }
 #bread i:first-child {
     margin-right: 1rem;
-    
+}
+#bread span {
+    width: calc(100% - 40px);
+    text-align: center;
 }
 
 

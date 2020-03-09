@@ -80,7 +80,7 @@ function formSuccess(){
 
 function toaster(message, timer) {
     var x = document.getElementById("bread");
-    x.innerHTML = '<i class="gg-comment"></i>' + message;
+    x.innerHTML = '<i class="gg-comment"></i><span>' + message + '</span>';
     x.className = "show";
     setTimeout(function(){ 
         x.className = x.className.replace("show", ""); 
