@@ -1,7 +1,7 @@
 function ajaxRequest(e,t,n,a){let s=new XMLHttpRequest;s.open(e,t,!0),"POST"==e&&s.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),s.onreadystatechange=function(){if(4==s.readyState&&200==s.status){let e=s.responseText;a(e)}},s.send(n)}
 document.addEventListener("DOMContentLoaded", function(){
 
-
+    
     // Check for submission
     const urlParams = new URLSearchParams(window.location.search);
     const submissionParam = urlParams.get('submission');
@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function(){
         formSuccess();
         toaster("Thanks, we've recieved your message and will be in touch!", 4500)
     }
+
     // How can we help section
     var helpItems = document.querySelectorAll(".what-section__item");
     var hideBtn = 0;
