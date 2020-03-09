@@ -1,5 +1,10 @@
 {
- "name": "App",
+ "name": "Employment Lawyers",
+ "short_name": "e2law",
+ "start_url": ".",
+ "display": "standalone",
+ "background_color": "#fff",
+ "description": "Employment Lawyers Tauranga",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
