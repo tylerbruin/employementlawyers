@@ -61,12 +61,6 @@ body h2 {
     background-color: var(--lighter);
 }
 
-.open { 
-    max-height: 9999px !important;
-    transition: all 0.5s;
-    transition-delay: 0;
-} 
-
 #header-container {
     padding-top: 1rem;
     background-color: #fff;
@@ -82,8 +76,15 @@ body h2 {
     background-color: #fff;
 }
 
+#header-container .logo-img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+    object-fit: contain;
+}
+
 /* Desktop */
-@media (min-width:1025px) {
+@media (min-width:768px) {
     #header-container .header-content {
         flex-direction: row;
     }
@@ -133,11 +134,13 @@ body h2 {
     color: var(--lighter);
     
 }
+
 /* Header END */
 
 /* Home Section START */
 section, footer {
     min-height: 25vh;
+    padding: 0 15px;
 }
 
 #home-section {
@@ -175,9 +178,9 @@ section, footer {
     padding: 1rem 0;
 }
 /* Desktop */
-@media (min-width:1025px) { 
+@media (min-width:768px) { 
     #home-section {
-        min-height: 60vh;
+        min-height: 52vh;
     }
 
     #home-section .home-section__content h1 { 
@@ -215,6 +218,7 @@ section, footer {
 #what-section .what-section__list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
 }
@@ -242,10 +246,10 @@ section, footer {
     padding: 0 1rem;
 }
 /* Desktop */
-@media (min-width:1025px) {
+@media (min-width:768px) {
     .what-section__item {
         width: 24%;
-        height: 210px
+        height: 190px
     }
     .what-section__item {
         margin-right: 1.33%;
@@ -295,6 +299,7 @@ section, footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-bottom: 3rem;
     
 }
 
@@ -305,18 +310,20 @@ section, footer {
 
 #why-section .why-section__content-text ul {
     padding-left: 20px;
+    margin-bottom: 1.5rem;
 }
 
 #why-section .why-section__content-text ul li {
     line-height: 1.5;
     font-size: 18px;
+    margin: .25rem 0;
 }
 
 #why-section .why-section__content .why-section__content-text {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 1rem;
-    max-height: calc(27px * 5);
+    /* max-height: calc(27px * 5); */
     overflow: hidden;
     transition-delay: 0s;
     transition: all 0.25s;
@@ -330,7 +337,7 @@ section, footer {
 }
 
 /* Desktop */
-@media (min-width:1025px) { 
+@media (min-width:768px) { 
     #why-section .why-section__content .why-section__content-text {
         padding: 0;
     }
@@ -341,13 +348,17 @@ section, footer {
 #who-section {
     color: #fff;
     background-color: #f8f8ff;
+    padding: 0;
+}
+#who-section h2#who {
+    padding-top: 0;
 }
 
 #who-section .who-profiles {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-bottom: 2rem;  
+    /* margin-bottom: 2rem;   */
     transition: 0.5s all;
 
 }
@@ -359,11 +370,7 @@ section, footer {
     flex-direction: column;
     align-items: center;
 }
-#who-section .who-profiles .profile-text {
-    max-height: 0px;
-    overflow: hidden;
-    transition: all 0.25s;
-}
+
 a.more-button {
     cursor: pointer;
     display: flex;
@@ -385,7 +392,7 @@ a.more-button i {
     color: var(--lightest);
 }
 
-#who-section .who-profiles .profile h4 {
+#who-section .who-profiles .profile h3 {
     font-size: 30px;
     padding: 1rem 0;
 }
@@ -427,7 +434,7 @@ a.more-button i {
 }
 
 /* Desktop */
-@media (min-width:1025px) { 
+@media (min-width:768px) { 
 
     #who-section .who-profiles {
         display: flex;
@@ -452,7 +459,7 @@ footer {
     background-color: #3f3d55;
     display: flex;
     flex-direction: row;
-    padding: 1.5rem 1rem 3rem 1rem;
+    padding: 3rem 1rem 7.5rem 1rem;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -469,11 +476,11 @@ footer .footer-heading {
 footer .contact-block {
     width: 45%;
 }
-footer .contact-block:nth-child(4) {
+/* footer .contact-block:nth-child(4) {
     width: 95%;
     flex-direction: row;
     order: 5;
-}
+} */
 
 footer .contact-heading {
     color: #fff;
@@ -504,16 +511,16 @@ footer p {
 }
 
 
-@media (min-width:1025px) { 
+@media (min-width:768px) { 
     footer {
         justify-content: space-evenly;
     }
     footer .contact-block {
-        width: 15%;
+        width: 22%;
     }
-    footer .contact-block:nth-child(4) {
+    /* footer .contact-block:nth-child(4) {
         width: 23%
-    }
+    } */
 }
 
 .contact-btn {
@@ -547,7 +554,7 @@ footer p {
 .contact-btn:hover a {
     background-color: var(--lighter);
 }
-@media (min-width:1025px) { 
+@media (min-width:768px) { 
     .contact-btn a {
         display: block;
     }
@@ -684,6 +691,6 @@ footer p {
 
 
 /* Desktop */
-@media (min-width:1025px) {
+@media (min-width:768px) {
 
 }
